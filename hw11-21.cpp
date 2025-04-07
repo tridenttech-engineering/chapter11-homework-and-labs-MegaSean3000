@@ -1,19 +1,16 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
-int main() {
-    int stockPrices[] = { 25, 65, 23, 45, 66, 77, 88, 43, 335, 65, 656 };
-    int size = sizeof(stockPrices) / sizeof(stockPrices[0]);
+int main()
 
-    int sum = 0;
+{
+double prices[10] = {96.5, 100.5, 100.5, 100.5, 99, 99, 99, 100, 98.5, 98.9};
+double total = 0.0;
+double average = 0.0;
 
-    for (int i = 0; i < size; ++i) {
-        sum += stockPrices[i];
-    }
+cout << fixed << setprecision(2);
+cout << "Average stock price: $" << average << endl;
+return 0;
 
-    float average = static_cast<float>(sum) / size;
-
-    cout << "The average value for the stock prices is " << average << endl;
-
-    return 0;
-}
+} //end of main function
